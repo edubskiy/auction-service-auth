@@ -1,6 +1,4 @@
-
-service:
-  name: auth-service
+service: auth-service
 
 plugins:
   - serverless-bundle
@@ -9,6 +7,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   memorySize: 128
+  region: eu-west-2
   environment:
     AUTH0_PUBLIC_KEY: ${file(secret.pem)}
 
